@@ -19,6 +19,7 @@ main_page_head = '''
     <style type="text/css" media="screen">
         body {
             padding-top: 80px;
+            background-image: url("https://wallpapertag.com/wallpaper/middle/c/3/b/926308-flat-black-wallpaper-2560x1600-high-resolution.jpg#.W6VGhuHGqCU.link")
         }
         #trailer .modal-dialog {
             margin-top: 200px;
@@ -40,7 +41,8 @@ main_page_head = '''
             padding-top: 20px;
         }
         .movie-tile:hover {
-            background-color: #EEE;
+            color: grey;
+            background-color: black;
             cursor: pointer;
         }
         .scale-media {
@@ -55,6 +57,9 @@ main_page_head = '''
             left: 0;
             top: 0;
             background-color: white;
+        }
+        .smaller {
+            font-size: 15px;
         }
     </style>
     <script type="text/javascript" charset="utf-8">
@@ -124,7 +129,8 @@ main_page_content = '''
 movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
-    <h2>{movie_title}</h2>
+    <h2 style="color:white">{movie_title}</h2> <h4 style="color:grey">({release_year})</h4>
+    <p style="color:grey">{storyline}</p>
 </div>
 '''
 
@@ -145,7 +151,9 @@ def create_movie_tiles_content(movies):
         content += movie_tile_content.format(
             movie_title=movie.title,
             poster_image_url=movie.poster_image_url,
-            trailer_youtube_id=trailer_youtube_id
+            trailer_youtube_id=trailer_youtube_id,
+            storyline=movie.storyline,
+            release_year=movie.release_year
         )
     return content
 
