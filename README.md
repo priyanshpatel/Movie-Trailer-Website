@@ -19,7 +19,7 @@ The following files are included to run this project:
 
 ## Steps to Run Project
 
-* Clone this repository to your computer.
+* Clone or download this repository to your computer.
 * Open the terminal editor. Command Prompt for Windows and Terminal in Linux or Mac.
 * Navigate to the directory of the project using the terminal editor.
 * Run the following command: 
