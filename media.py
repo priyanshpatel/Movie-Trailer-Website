@@ -1,5 +1,6 @@
 import webbrowser
 
+
 class Movie():
     """Class used to create movies instances.
 
@@ -7,10 +8,11 @@ class Movie():
     title: A string containing name of the movie.
     storyline: A string containing the plot of the movie.
     poster_image_url: A string containing URL of the poster image of the movie.
-    trailer_youtube_url: A string containing the URL the of trailer of the movie.
+    trailer_youtube_url: A string containing URL of the trailer of the movie.
     release_year: A string containing the year of release of the movie.
     """
-    def __init__(self, movie_title, movie_storyline, poster_image, trailer_youtube, release_year):
+    def __init__(self, movie_title, movie_storyline, poster_image,
+                 trailer_youtube, release_year):
         self.title = movie_title
         self.storyline = movie_storyline
         self.poster_image_url = poster_image
